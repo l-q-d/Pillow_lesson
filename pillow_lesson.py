@@ -28,7 +28,7 @@ b_blended = Image.blend(b_crop_right, b_crop_left, 0.4)
 coordinates = (left_crop_half, 0, right_crop, green.height)
 green_crop = green.crop(coordinates)
 
-final_lenna = Image.merge("RGB", (r_blended, b_blended, green_crop))
+final_lenna = Image.merge("RGB", (r_blended, green_crop, b_blended))
 final_lenna.save('final_lenna.jpg')
 final_lenna.thumbnail((80, 80))
 final_lenna.save('final_lenna_thmb.jpg')
